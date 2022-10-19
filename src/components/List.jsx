@@ -1,6 +1,4 @@
 import React from 'react';
-import { BestMovie } from './BestMovie';
-import Grade from './Grade';
 import { Switch } from './Switch';
 
 class List extends React.Component {
