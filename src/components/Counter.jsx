@@ -17,9 +17,9 @@ export const Counter = () => {
 
    return (
       <div>
-         <button onClick={()=>add()}>Add</button>
-         <button onClick={()=>remove()}>Remove</button>
-         <button onClick={()=>reset()}>Reset</button>
+         <button onClick={add}>Add</button>
+         <button onClick={remove}>Remove</button>
+         <button onClick={reset}>Reset</button>
          Counter: {counter}
       </div>
    );
