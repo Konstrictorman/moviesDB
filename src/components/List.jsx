@@ -1,14 +1,17 @@
 import React from 'react';
+import { BestMovie } from './BestMovie';
 import { Switch } from './Switch';
+
+const MemoComp = React.memo(function memoComp(props) {
+   const { movie } = props;
+   console.log("Rendering memoComp");
+   return <div style={{ color: 'yellow' }}>BestMovie ever: {movie}</div>;
+ });
+
+ //const BestMovieMemo = React.memo(<BestMovie movie="Pulp fiction"/>);
 
 class List extends React.Component {
   render() {
-    const MemoComp = React.memo((props) => {
-      const { movie } = props;
-      console.log("Rendering memoComp");
-      return <div style={{ color: 'yellow' }}>BestMovie ever: {movie}</div>;
-    });
-
     const title = React.createElement('h4', null, "Tarantino's movies");
     const pf = React.createElement(
       'li',
@@ -62,6 +65,7 @@ class List extends React.Component {
       list,
       <br />,
       <MemoComp movie="Kill Bill"/>,
+      //<BestMovie movie="Pulp fiction"/>,
       <br />
     );
     return container;
