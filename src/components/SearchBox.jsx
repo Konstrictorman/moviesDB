@@ -1,9 +1,14 @@
 import React from "react";
 
 class SearchBox extends React.PureComponent {
-	state = {
-		text: "",
-	};
+
+   constructor(props) {
+      super(props);
+      this.state = {
+         text: "",
+      };
+   
+   }
 /*
 	handleSubmit = (e) => {
 		e.preventDefault();
