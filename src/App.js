@@ -1,19 +1,21 @@
 import './App.css';
-import {Counter} from './components/Counter';
-import SearchBox from './components/SearchBox';
-import List from './components/List';
+import { ErrorBoundary } from './components/ErrorBoundary';
+
+import { Layout } from './components/Layout/Layout';
+import { Main } from './components/Main';
+import { Menu } from './components/Menu';
 
 function App() {
-
-   
-
-
   return (
     <div className="App" id="container">
-      <h2>Hello World</h2>
-      <Counter/>
-      <List/>
-      <SearchBox/>
+      <ErrorBoundary>
+        <Layout className="">
+         <Menu className="border"/>
+         <div className='layout_hr'/>
+         <Main className="border"/>
+         
+        </Layout>
+      </ErrorBoundary>
     </div>
   );
 }
