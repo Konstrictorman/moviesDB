@@ -27,13 +27,13 @@ class SearchBox extends React.PureComponent {
 	render() {
 		return (
 			<div>
-				<form onSubmit={(e) => this.handleSubmit(e)}>
+				<form onSubmit={this.handleSubmit}>
 					<input
 						type="text"
 						name="search"
 						placeholder="Search..."
 						value={this.state.text}
-						onChange={(e) => this.handleChange(e)}
+						onChange={this.handleChange}
 					/>
 					<input type="submit" />
 				</form>

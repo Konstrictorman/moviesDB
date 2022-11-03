@@ -14,7 +14,13 @@ export const Switch = (props) => {
   return (
     <div style={{ display: 'flex', fontWeight: '400' }}>
       <label style={{ fontSize: '12px' }}>{offLabel}</label>
-      <input className="react-switch-checkbox" id={`react-switch-${id}`} type="checkbox" onChange={handleChange} />
+      <input
+        className="react-switch-checkbox"
+        id={`react-switch-${id}`}
+        type="checkbox"
+        onChange={handleChange}
+        checked={watched}
+      />
       <label className="react-switch-label" htmlFor={`react-switch-${id}`}>
         <span className={`react-switch-button`} />
       </label>
